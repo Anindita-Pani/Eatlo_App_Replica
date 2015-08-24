@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="3dp" >
+
+    <RelativeLayout
+        android:id="@+id/rlItemOuter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:padding="3dp" >
+
+        <RelativeLayout
+            android:id="@+id/rlItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/imgDishItem"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imgDishItem"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvItemName"
+                android:layout_alignBottom="@+id/tvItemName"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvItemDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvItemName"
+                android:layout_toLeftOf="@+id/imgRemoveMenuItem"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/menuItemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgMenuAddItem"
+                android:layout_marginBottom="6dp"
+                android:layout_toLeftOf="@+id/imgMenuAddItem"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/zero"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgRemoveMenuItem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/imgMenuAddItem"
+                android:layout_toLeftOf="@+id/menuItemCount"
+                android:src="@drawable/ic_action_remove_item" />
+
+            <ImageView
+                android:id="@+id/imgMenuAddItem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/tvItemDesc"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_action_add_item" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.app.eatlo.replica.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/tvDeliveryLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/strDeliveryLoc"
+            android:textColor="@color/theme_color" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_alignLeft="@+id/tvDeliveryLoc"
+            android:layout_alignRight="@+id/tvDeliveryLoc"
+            android:layout_below="@+id/tvDeliveryLoc"
+            android:background="@color/theme_color" />
+
+        <TextView
+            android:id="@+id/tvChooseDish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvDeliveryLoc"
+            android:background="@color/light_grey"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:text="@string/strChooseDish" />
+
+        <TextView
+            android:id="@+id/tvPlaceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tvChooseDish"
+            android:background="@color/light_grey"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:text="@string/strPlaceOrder" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvSelectDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTabs"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="@string/strSelectDelLoc" />
+       <android.support.v7.widget.RecyclerView
+         android:layout_below="@+id/tvSelectDelivery"
+            android:id="@+id/rvDelLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

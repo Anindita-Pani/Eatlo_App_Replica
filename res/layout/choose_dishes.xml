@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white" >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvChooseDish"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlCart"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvMenuTitle" >
+</android.support.v7.widget.RecyclerView>
+    
+    
+    <RelativeLayout
+        android:id="@+id/rlCart"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:background="@color/theme_color"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+         >
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvItemCount"
+            android:src="@drawable/ic_cart" />
+
+        <TextView
+            android:id="@+id/tvItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/zero"
+            android:layout_marginLeft="12dp"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/imgNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_action_next_white" />
+
+        <TextView
+            android:id="@+id/tvEnterAddress"
+            android:layout_width="80dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgNext"
+            android:text="@string/strEnterAddress"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvPrice"
+            android:layout_toLeftOf="@+id/tvPrice"
+            android:text="@string/Rs"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvEnterAddress"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@+id/tvEnterAddress"
+            android:layout_centerVertical="true"
+            android:text="@string/zero"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:padding="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tvNonVeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/strNonVeg"
+        android:background="@color/dark_grey"
+        android:textColor="@android:color/white" 
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+         android:padding="8dp"
+         android:layout_marginTop="5dp"
+        android:id="@+id/tvVeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tvNonVeg"
+        android:text="@string/strVeg"
+        android:background="@color/dark_grey"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+         android:paddingTop="8dp"
+         android:paddingBottom="8dp"
+         android:paddingRight="12dp"
+         android:paddingLeft="12dp"
+        android:id="@+id/tvAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tvVeg"
+        android:text="@string/strAll"
+        android:textColor="@android:color/white"
+        android:background="@color/theme_color"
+        android:layout_marginLeft="5dp"
+         />
+
+    <TextView
+        android:id="@+id/tvMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvAll"
+        android:layout_alignLeft="@+id/rvChooseDish"
+        android:padding="5dp"
+        android:text="@string/strLunch"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>
